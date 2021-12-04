@@ -1,0 +1,27 @@
+body{
+    /*2rem arriba y abajo
+    4rem derecha izquierda
+    */
+    margin:2rem 4rem;
+}
+h1{
+    text-align:center;
+    background: #ffccff;
+    border-width:2px;
+    border-style:dashed;
+    border-color:#ff99ff;
+    width: 25rem;
+    padding: 3rem 1rem;
+}
+
+p{
+    margin: 2rem;
+    text-align:justify;
+    text-indent: 1rem;
+    background: hsl(0, 100%, 58%);
+    border-width:2px;
+    border-style:solid;
+    border-color:#9661FF;
+    width: 25rem;
+    padding: 0.5rem 3rem;
+}

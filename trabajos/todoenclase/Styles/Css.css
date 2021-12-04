@@ -1,0 +1,60 @@
+body{
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, #fff 100%);
+}
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+span{
+    font-size: 2rem;
+}
+.background{
+    background-color: #0097a7;
+}
+.principal{
+    display: flex;
+    justify-content: space-around; /*Espacio entre los items del nemu*/
+}
+.principal a{
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.principal a:hover{
+    background-color: #FFE433;
+    animation: item-hover 1s;
+    cursor: pointer;
+}
+@keyframes item-hover {
+    from {
+      color: #fff;
+      }
+    to {
+      color: #000;
+      }
+}
+.sectionClass{
+    background-image: url(../Images/Torno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido{
+    
+}
+.TituloFUndamentos{
+    color: #fff;
+}

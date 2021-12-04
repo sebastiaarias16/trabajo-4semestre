@@ -1,0 +1,203 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author Sebastian Arias
+ */
+class Node1 {
+     Ndo Raiz;
+     
+     public Node1(){
+         Raiz = null;
+     }
+
+
+    
+    public class Ndo{
+     
+         public int num;
+         public Object datos;
+         public Ndo padre;
+         public Ndo izquierda;
+         public Ndo derecha;
+         
+    public Ndo (int indice){
+         num = indice;
+         datos = null;
+         padre = null;
+         izquierda = null;
+         derecha = null;
+         
+     }
+         
+     }
+    public void insertar (int m,Object hoja){
+         Ndo n = new Ndo(m);
+         n.datos=hoja;
+         if(Raiz == null){
+             Raiz=n;
+         }
+         else{
+             Ndo sec  = Raiz;
+             while (sec!=null){
+                 n.padre=sec;
+                 if(n.num >= sec.num){
+                     sec=sec.derecha;
+                 }
+                 else{
+                     sec=sec.izquierda;
+                 }
+             }
+             if(n.num<n.padre.num){
+                 n.padre.izquierda=n;
+             }
+             else{
+                    n.padre.derecha=n;
+             }
+        }
+         
+    }
+     
+    public void print2DUtil(Ndo root, int space){
+        int cont = 10;
+        
+        if(root == null){
+            return;
+        }
+        space += cont;
+        
+        print2DUtil(root.derecha, space);
+        System.out.print("\n");
+        for (int i = cont; i < space; i++){
+            System.out.print(" ");
+        }
+         System.out.print(root.num + "\n");
+         
+         print2DUtil(root.izquierda, space);
+    }
+    
+    void print2D(Ndo root){
+        print2DUtil(root, 0);
+    }
+}
+
+class Node2 {
+     Ndo Raiz;
+     
+     public Node2(){
+         Raiz = null;
+     }
+    
+    public class Ndo{
+     
+         public int num;
+         public Object datos;
+         public Ndo padre;
+         public Ndo izquierda;
+         public Ndo derecha;
+         
+    public Ndo (int indice){
+         num = indice;
+         datos = null;
+         padre = null;
+         izquierda = null;
+         derecha = null;
+         
+     }
+         
+     }
+    public void insertar (int m,Object hoja){
+         Ndo n = new Ndo(m);
+         n.datos=hoja;
+         if(Raiz == null){
+             Raiz=n;
+         }
+         else{
+             Ndo sec  = Raiz;
+             while (sec!=null){
+                 n.padre=sec;
+                 if(n.num >= sec.num){
+                     sec=sec.derecha;
+                 }
+                 else{
+                     sec=sec.izquierda;
+                 }
+             }
+             if(n.num<n.padre.num){
+                 n.padre.izquierda=n;
+             }
+             else{
+                    n.padre.derecha=n;
+             }
+        }
+         
+    }
+     
+    public void print2DUtil(Ndo root, int space){
+        int cont = 10;
+        
+        if(root == null){
+            return;
+        }
+        space += cont;
+        
+        print2DUtil(root.derecha, space);
+        System.out.print("\n");
+        for (int i = cont; i < space; i++){
+            System.out.print(" ");
+        }
+         System.out.print(root.num + "\n");
+         
+         print2DUtil(root.izquierda, space);
+    }
+    
+    void print2D(Ndo root){
+        print2DUtil(root, 0);
+    }
+    
+    public static void main (String[] args){
+        
+        Scanner lectura = new Scanner (System.in);
+        int opera1;
+        int opera2;
+        int arbol1=0;
+        int arbol2=0;
+        
+        System.out.print("numero de nodos arbol 1");
+        opera1 = lectura.nextInt();
+        System.out.print("numero de nodos arbol 2");
+        opera2 = lectura.nextInt();
+        
+        Node1 ar = new Node1();
+         System.out.print("arbol par");
+         for (int i=1; i <=opera1; i++){
+             do{
+                 arbol1=(int)(Math.random()*1000);
+             }while(arbol1%2!=0);
+             ar.insertar(arbol1, "hoja 1");
+             System.out.print(arbol1);
+         
+         }
+         
+         System.out.print("/////////////////////////");
+         ar.print2D(ar.Raiz);
+         Node2 ar2 = new Node2();
+         System.out.print("/////////////////////////");
+         System.out.print("arbol impar");
+         for (int i=1; i <=opera2; i++){
+             do{
+                 arbol2=(int)(Math.random()*1000);
+             }while(arbol1%2!=0);
+             ar2.insertar(arbol2, "hoja 2");
+             System.out.print(arbol2);
+             
+         }
+         System.out.print("/////////////////////////");
+         ar2.print2D(ar2.Raiz);
+         
+         
+   
+    }
+}

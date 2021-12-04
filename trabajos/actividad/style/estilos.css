@@ -1,0 +1,68 @@
+body{
+    background-color: azure;
+}
+
+h1{
+    color: #000000;
+    background-color: #ff0000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    background-size: 0%;
+    padding: 1em;
+    height: 100%;
+}
+
+.container{
+    padding:1em;
+    overflow: hidden;
+
+}
+.item{
+    margin: 1em;
+    padding: 1em;
+    color: black;
+    float: left;
+}
+
+#item1{
+    background-color:yellow;
+    width: 45%;
+    height: 50%;
+}
+#item2{
+    background-color:yellow;
+    width: 45%;
+    height: 50%;
+}
+.container_uno{
+    padding:1em;
+
+}
+.container_cuatro{
+    
+    padding:1em;
+    overflow: hidden;
+}
+
+#item1_dos{
+    background-color:rgb(0, 140, 255);
+    width: 20%;
+    height: 50%;
+}
+#item2_dos{
+    background-color:rgb(0, 140, 255);
+    width: 20%;
+    height: 55%;
+}
+#item3_dos{
+    background-color:rgb(0, 140, 255);
+    width: 20%;
+    height: 50%;
+}
+#item4_dos{
+    background-color:rgb(0, 140, 255);
+    width: 20%;
+    height: 55%;
+}

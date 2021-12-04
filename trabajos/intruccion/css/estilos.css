@@ -1,0 +1,21 @@
+body{
+    background-color: blanchedalmond;
+    background-image:url(../img/shadow.jpg)
+    
+}
+
+h1{
+    color: #340000;
+    background-color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000FC1 ;
+    text-decoration: underline;
+    letter-spacing: 4px;
+}
